@@ -33,7 +33,7 @@
       })
       .state('contact', {
         url : '/contact',
-        templateUrl : 'contact.html',
+        templateUrl : 'partials/contact.html',
         controller : 'ContactController'
       });
   }]);
