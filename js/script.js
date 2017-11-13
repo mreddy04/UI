@@ -34,7 +34,7 @@
     $stateProvider
       .state('login', {
         url : '/login',
-        templateUrl : 'login.html',
+        templateUrl : 'partials/login.html',
         controller : 'LoginController'
       })
       .state('home', {
