@@ -1,0 +1,85 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sample</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+</head>
+
+<body>
+<div class="container" ng-app="myApp">
+  <div class="row">
+    <div ui-view></div>
+  </div>
+  
+  <script type="text/ng-template" id="login.html">
+    <div id ="login-form" class="col-md-12">
+      <h3>Please Sign In</h3>
+      <form ng-submit="formSubmit()" name="LoginForm" class="form" novalidate>
+        <div class="col-md-12">
+          <div class="form-group">
+            <input type="text" name="username" class="form-control" ng-model="username" placeholder="username" required/>
+              <span style="color:red" ng-show="LoginForm.username.$dirty && LoginForm.username.$invalid">
+			  <span class="text-incorrect" ng-show="LoginForm.username.$error.required">Username is required.</span>
+			  </span>
+          </div> 
+          <div class="form-group">
+            <input type="password" name="password" class="form-control" ng-model="password" placeholder="password" required/>
+              <span style="color:red" ng-show="LoginForm.password.$dirty && LoginForm.password.$invalid">
+			  <span class="text-incorrect" ng-show="LoginForm.password.$error.required">Password is required.</span>
+			  </span>
+          </div>
+          <div class="text-incorrect ng-binding">{{error}}</div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-success" ng-disabled=!LoginForm.$valid>Sign In</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </script>
+  
+  <script type="text/ng-template" id="home.html">
+    <div class="col-md-12">
+    <!-- Navigation -->
+	    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+	      <div class="container">
+	        <a class="navbar-brand" href="#">
+	          <img src="http://placehold.it/300x60?text=Logo" width="150" height="30" alt="">
+	        </a>
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbarResponsive">
+	          <ul class="navbar-nav ml-auto">
+	            <li class="nav-item active">
+	              <a class="nav-link" ui-sref="home">Home</a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" ui-sref="about">About</a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" ui-sref="contact">Contact</a>
+	            </li>
+	            <li class="nav-item">
+	              <button class="nav-link logout-btn" href="#">logout</button>
+	            </li>
+	          </ul>
+	        </div>
+	      </div>
+	    </nav>
+    </div>
+    <div class="col-md-12">
+      <h3>Home Page</h3>
+      <a ui-sref="login">Back</a>
+  	</div>
+  </script>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
