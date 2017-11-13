@@ -39,7 +39,7 @@
       })
       .state('home', {
         url : '/home',
-        templateUrl : 'home.html',
+        templateUrl : 'partials/dashboard.html',
         controller : 'HomeController'
       })
       .state('about', {
