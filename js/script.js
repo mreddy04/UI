@@ -40,8 +40,7 @@
 
 
 
-  app.controller('LoginController', function($scope, $rootScope, $stateParams, $state, LoginService) {
-    $rootScope.title = "AngularJS Login Sample";
+  app.controller('LoginController', function($scope, $stateParams, $state, LoginService) {
     
     $scope.formSubmit = function() {
       if(LoginService.login($scope.username, $scope.password)) {
@@ -56,11 +55,15 @@
     
   });
   
-  app.controller('HomeController', function($scope, $rootScope, $stateParams, $state, LoginService) {
-    $rootScope.title = "AngularJS Login Sample";
-    
+  app.controller('HomeController', function($scope, $stateParams, $state) {
+
   });
   
+  app.controller('ContactController', function($scope, $stateParams, $state) {
+    
+  });
+
+
   app.factory('LoginService', function() {
     var admin = 'a';
     var pass = 'a';
