@@ -29,7 +29,7 @@
       })
       .state('about', {
         url : '/about',
-        templateUrl : 'about.html',
+        templateUrl : 'partials/about.html',
         controller : 'AboutController'
       })
       .state('contact', {
