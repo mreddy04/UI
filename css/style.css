@@ -76,9 +76,13 @@ body {
   border-radius: 4px;
 }
 
+.contactDetails {
+  margin-top: 20px;
+}
+
 .contactForm {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #fff;
     padding: 20px;
 }
 
@@ -94,14 +98,15 @@ body {
 }
 
 .contactForm input[type=submit] {
-    background-color: #4CAF50;
+    margin-top: 20px;
+    background-color: #2185d0;
     color: white;
-    padding: 12px 20px;
+    padding: 5px 30px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .contactForm input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #1fb5bf;
 }

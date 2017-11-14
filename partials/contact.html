@@ -19,7 +19,7 @@
                         <a class="nav-link" ui-sref="contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link logout-btn" href="#">logout</button>
+                        <button class="nav-link logout-btn" ui-sref="login">logout</button>
                     </li>
                 </ul>
             </div>
@@ -33,15 +33,15 @@
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </div>
     </div>
-    <div class="row">
+    <div class="row" class="contactDetails">
         <div class="col-md-6 contactForm">
             <form>
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <label for="name"><b>Name *</b></label>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+                <label for="email"><b>Email *</b></label>
+                <input type="text" id="email" name="email" placeholder="Your email..">
+                <label for="message"><b>Message *</b></label>
+                <textarea id="message" name="message" placeholder="Write something.."></textarea>
                 <input type="submit" value="Submit">
             </form>
         </div>
