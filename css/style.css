@@ -75,6 +75,7 @@ body {
   color: white;
   font-weight: bold;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .contactDetails {
@@ -121,6 +122,7 @@ body {
 }
 .ThankyouText .jumbotron {
   background-color: #fff;
+  height: 800px;
 }
 .ThankyouText .jumbotron div {
   margin-top: 100px;
@@ -136,4 +138,5 @@ body {
 }
 .ThankyouText .jumbotron .contactLink {
   color: dodgerblue;
+  cursor: pointer;
 }
