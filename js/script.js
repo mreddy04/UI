@@ -60,13 +60,8 @@
   });
   
   app.controller('ContactController', function($scope, $stateParams, $state) {
-    function myMap() {
-      var mapProp= {
-          center:new google.maps.LatLng(51.508742,-0.120850),
-          zoom:5,
-      };
-      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
+    $scope.map = {center: {latitude: 40.1451, longitude: -99.6680 }, zoom: 4 };
+    $scope.options = {scrollwheel: false};
   });
 
 
