@@ -122,6 +122,7 @@
   app.controller('ThankyouController', function($scope, $stateParams, $state, saveContact) {
     $scope.contactPerson = saveContact.getContact();
   });
+  
   app.directive('hcChart', function () {
     return {
       restrict: 'E',
@@ -134,7 +135,8 @@
       }
     };
   });
-  app..directive('hcPieChart', function () {
+
+  app.directive('hcPieChart', function () {
     return {
       restrict: 'E',
       template: '<div></div>',
