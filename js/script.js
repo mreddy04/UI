@@ -62,6 +62,16 @@
   app.controller('ContactController', function($scope, $stateParams, $state) {
     $scope.map = {center: {latitude: 40.1451, longitude: -99.6680 }, zoom: 4 };
     $scope.options = {scrollwheel: false};
+    $scope.name = "";
+    $scope.email = "";
+    $scope.message = "";
+
+    $scope.contactSubmit = function(){
+      if ($scope.contactForm.$valid) {
+        alert('our form is amazing');
+      }
+    };
+
   });
 
 
