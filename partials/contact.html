@@ -37,17 +37,17 @@
         <div class="col-md-6 contactForm">
             <form ng-submit="contactSubmit()" name="contactForm" class="contactUs" novalidate>
                 <label for="name"><b>Name *</b></label>
-                <input type="text" id="name" name="name" ng-model="name" placeholder="Your name..">
+                <input type="text" id="name" name="name" ng-model="name" placeholder="Your name.." required>
                 <span style="color:red" ng-show="contactForm.name.$dirty && contactForm.name.$invalid">
                   <span class="text-incorrect" ng-show="contactForm.name.$error.required">Name is required.</span>
                 </span>
                 <label for="email"><b>Email *</b></label>
-                <input type="text" id="email" name="email" ng-model="email" placeholder="Your email..">
+                <input type="text" id="email" name="email" ng-model="email" placeholder="Your email.." required>
                 <span style="color:red" ng-show="contactForm.email.$dirty && contactForm.email.$invalid">
                   <span class="text-incorrect" ng-show="contactForm.email.$error.required">Name is required.</span>
                 </span>
                 <label for="message"><b>Message *</b></label>
-                <textarea id="message" name="message" ng-model="message" placeholder="Write something.."></textarea>
+                <textarea id="message" name="message" ng-model="message" placeholder="Write something.." required></textarea>
                 <span style="color:red" ng-show="contactForm.message.$dirty && contactForm.message.$invalid">
                   <span class="text-incorrect" ng-show="contactForm.message.$error.required">Name is required.</span>
                 </span>
