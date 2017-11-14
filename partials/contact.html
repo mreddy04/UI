@@ -35,14 +35,23 @@
     </div>
     <div class="row contactDetails">
         <div class="col-md-6 contactForm">
-            <form>
+            <form ng-submit="contactSubmit()" name="contactForm" class="contactUs" novalidate>
                 <label for="name"><b>Name *</b></label>
-                <input type="text" id="name" name="name" placeholder="Your name..">
+                <input type="text" id="name" name="name" ng-model="name" placeholder="Your name..">
+                <span style="color:red" ng-show="contactForm.name.$dirty && contactForm.name.$invalid">
+                  <span class="text-incorrect" ng-show="contactForm.name.$error.required">Name is required.</span>
+                </span>
                 <label for="email"><b>Email *</b></label>
-                <input type="text" id="email" name="email" placeholder="Your email..">
+                <input type="text" id="email" name="email" ng-model="email" placeholder="Your email..">
+                <span style="color:red" ng-show="contactForm.email.$dirty && contactForm.email.$invalid">
+                  <span class="text-incorrect" ng-show="contactForm.email.$error.required">Name is required.</span>
+                </span>
                 <label for="message"><b>Message *</b></label>
-                <textarea id="message" name="message" placeholder="Write something.."></textarea>
-                <input type="submit" value="Submit">
+                <textarea id="message" name="message" ng-model="message" placeholder="Write something.."></textarea>
+                <span style="color:red" ng-show="contactForm.message.$dirty && contactForm.message.$invalid">
+                  <span class="text-incorrect" ng-show="contactForm.message.$error.required">Name is required.</span>
+                </span>
+                <input type="submit" value="Submit" ng-disabled=!contactForm.$valid>
             </form>
         </div>
         <div class="col-md-6">
