@@ -1,5 +1,5 @@
 (function() {
-  var app = angular.module('myApp', ['ngRoute', 'ui.router']);
+  var app = angular.module('myApp', ['ngRoute', 'ui.router', 'uiGmapgoogle-maps']);
   
   app.run(function($rootScope, $location, $state, LoginService) {
     $rootScope.$on('$stateChangeStart', 
