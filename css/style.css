@@ -86,7 +86,9 @@ body {
     padding: 20px;
 }
 
-.contactForm input[type=text], select, textarea {
+.contactForm input[type=text],
+.contactForm input[type=email],
+.contactForm textarea {
     width: 100%;
     padding: 5px;
     border: 1px solid #ccc;

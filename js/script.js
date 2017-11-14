@@ -59,7 +59,7 @@
 
   });
   
-  app.controller('ContactController', function($scope, $stateParams, $state) {
+  app.controller('ContactController', function($scope, $stateParams, $state, saveContact) {
     $scope.map = {center: {latitude: 40.1451, longitude: -99.6680 }, zoom: 4 };
     $scope.options = {scrollwheel: false};
     $scope.name = "";
@@ -68,10 +68,18 @@
 
     $scope.contactSubmit = function(){
       if ($scope.contactForm.$valid) {
-        alert('our form is amazing');
+        saveContact.setContact({
+          name: $scope.name,
+          email: $scope.email,
+          message: $scope.message
+        });
       }
     };
 
+  });
+
+  app.controller('ThankyouController', function($scope, $stateParams, $state, saveContact) {
+    $scope.contactPerson = saveContact.getContact();
   });
 
 
@@ -90,6 +98,19 @@
       }
     };
     
+  });
+
+
+  app.service('saveContact', function() {
+    var contact = { name : 'test', email: 'emails', message: 'message'};
+    return {
+      setContact : function(con) {
+        contact = con;
+      },
+      getContact : function() {
+        return contact;
+      }
+    };
   });
   
 })();
