@@ -1,4 +1,4 @@
-angular.module('myApp', []).
+angular.module('myApp', ['ngRoute', 'ui.router']).
 directive('myMap', function() {
 
     var link = function(scope, element, attrs) {
