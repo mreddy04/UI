@@ -111,6 +111,6 @@ body {
     background-color: #1fb5bf;
 }
 
-#contactForm input[type=submit]:disabled{
+.contactForm input[type=submit]:disabled{
   opacity: 0.5;
 }
