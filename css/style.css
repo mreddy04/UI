@@ -62,7 +62,8 @@ body {
   background: #1fb5bf;
 }
 
-#login-form .text-incorrect {
+#login-form .text-incorrect,
+.contactForm .text-incorrect {
   color: red;
   font-size: 12px;
   padding: 10px;
@@ -89,14 +90,12 @@ body {
 .contactForm input[type=text],
 .contactForm input[type=email],
 .contactForm textarea {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
 }
 
 .contactForm input[type=submit] {
