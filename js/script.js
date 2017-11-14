@@ -35,6 +35,11 @@
         url : '/contact',
         templateUrl : 'partials/contact.html',
         controller : 'ContactController'
+      })
+      .state('thankyou', {
+        url : '/thankyou',
+        templateUrl : 'partials/thankyou.html',
+        controller : 'ThankyouController'
       });
   }]);
 
@@ -73,6 +78,7 @@
           email: $scope.email,
           message: $scope.message
         });
+        $state.go('thankyou');
       }
     };
 
