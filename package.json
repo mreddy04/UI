@@ -1,0 +1,22 @@
+{
+  "name": "profectus",
+  "version": "1.0.0",
+  "description": "testing gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mreddy04/UI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mreddy04/UI/issues"
+  },
+  "homepage": "https://github.com/mreddy04/UI#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

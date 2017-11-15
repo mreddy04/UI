@@ -68,7 +68,7 @@
       },
       chart: {
         type: 'column',
-        width: angular.element('.columnHighChart').width()
+        width: document.querySelectorAll(".columnHighChart")[0].clientWidth
       },
       xAxis: {
           categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -104,7 +104,7 @@
     $scope.donutChartOptions = {
       chart: {
           type: 'pie',
-          width: angular.element('.donutHighChart').width()
+          width: document.querySelectorAll(".donutHighChart")[0].clientWidth
       },
       title: {
           text: 'Browser Usage'
