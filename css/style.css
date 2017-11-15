@@ -141,10 +141,14 @@ body {
   cursor: pointer;
 }
 
-.ChartsArea .col-md-6 {
+#chartArea {
+  margin: 10px;
+}
+
+#ChartsArea .col-md-6 .tile {
   background-color: #fff;
 }
-.ChartsArea .col-md-6 h6 {
+#ChartsArea .col-md-6 .tile h6 {
   border-bottom: 1px solid black;
   padding: 10px;
   text-align: center;
