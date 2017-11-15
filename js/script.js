@@ -62,6 +62,41 @@
   
   app.controller('HomeController', function($scope, $stateParams, $state) {
 
+    $scope.videosArr = ['https://www.youtube.com/embed/1-UdWS4RAA4', 
+                        'https://www.youtube.com/embed/YVgc2PQd_bo',  
+                        'https://www.youtube.com/embed/rzfmZC3kg3M', 
+                        'https://www.youtube.com/embed/u7gf6_85-jQ', 
+                        'https://www.youtube.com/embed/lHYDnj6IVnY', 
+                        'https://www.youtube.com/embed/mZ9nfMwxJa8',
+                        'https://www.youtube.com/embed/Nj6-Fn3UplQ'];
+    $scope.currentVideo = 0;
+    $scope.pages = getPageList();
+
+    document.getElementById('myIframe').src = $scope.videosArr[$scope.currentVideo];
+
+    $scope.preVideo = function() {
+      $scope.currentVideo = $scope.currentVideo === 0 ? 0 : $scope.currentVideo - 1;
+      document.getElementById('myIframe').src = $scope.videosArr[$scope.currentVideo];
+    };
+
+    $scope.nextvideo = function() {
+      $scope.currentVideo = $scope.currentVideo === $scope.videosArr.length - 1 ? $scope.currentVideo : $scope.currentVideo + 1;
+      document.getElementById('myIframe').src = $scope.videosArr[$scope.currentVideo];
+    };
+
+    $scope.getvideo = function(i) {
+      $scope.currentVideo = i - 1;
+      document.getElementById('myIframe').src = $scope.videosArr[$scope.currentVideo];
+    };
+
+    function getPageList() {
+      var ar = [];
+      for(var i = 1; i <= $scope.videosArr.length; i++ ){
+        ar.push(i);
+      }
+      return ar;
+    }
+
     $scope.chartOptions = {
       title: {
           text: 'Temperature data'

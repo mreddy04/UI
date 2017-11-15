@@ -141,15 +141,55 @@ body {
   cursor: pointer;
 }
 
-#chartArea {
-  margin: 10px;
+#ChartsArea {
+  margin: 15px;
 }
 
-#ChartsArea .col-md-6 .tile {
+#ChartsArea .col-md-6 .tile,
+#VideosArea .col-md-12 .tile {
   background-color: #fff;
 }
 #ChartsArea .col-md-6 .tile h6 {
   border-bottom: 1px solid black;
   padding: 10px;
   text-align: center;
+}
+
+#VideosArea .col-md-12 .tile h5 {
+ padding: 10px 0 0 10px;
+}
+
+.center .pagination {
+  padding-left: 100px;
+  margin: 10px;
+}
+
+.pagination li a {
+    color: #2185d0;
+    float: left;
+    padding: 5px 15px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.pagination li.active a {
+    background-color: #2185d0;
+    color: white;
+    border: 1px solid #2185d0;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.pagination li:first-child a {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pagination li:last-child a {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.center {
+    text-align: center;
 }
