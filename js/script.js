@@ -61,18 +61,20 @@
   });
   
   app.controller('HomeController', function($scope, $stateParams, $state) {
-      $scope.chartOptions = {
-        title: {
-            text: 'Temperature data'
-        },
-        xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
-                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        },
 
-        series: [{
-            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-        }]
+    $scope.chartOptions = {
+      title: {
+          text: 'Temperature data'
+      },
+      chart: {
+        type: 'column'
+      },
+      xAxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      },
+      series: [{
+          data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+      }]
     };
 
     $scope.pieData = [{
@@ -95,7 +97,31 @@
         }, {
             name: "Proprietary or Undetectable",
             y: 0.2
-    }]
+    }];
+
+
+    $scope.donutChartOptions = {
+      chart: {
+          type: 'pie'
+      },
+      title: {
+          text: 'Browser Usage'
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          innerSize: '60%',
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: true,
+            format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+          }
+        }
+      },
+      series: [{
+          data: $scope.pieData
+      }]
+    };
 
   });
   
@@ -136,39 +162,18 @@
     };
   });
 
-  app.directive('hcPieChart', function () {
-    return {
-      restrict: 'E',
-      template: '<div></div>',
-      scope: {
-          title: '@',
-          data: '='
-      },
-      link: function (scope, element) {
-        Highcharts.chart(element[0], {
-          chart: {
-              type: 'pie'
-          },
-          title: {
-              text: scope.title
-          },
-          plotOptions: {
-            pie: {
-              allowPointSelect: true,
-              cursor: 'pointer',
-              dataLabels: {
-                enabled: true,
-                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-              }
-            }
-          },
-          series: [{
-              data: scope.data
-          }]
-        });
-      }
-    };
-  });
+  // app.directive('hcPieChart', function () {
+  //   return {
+  //     restrict: 'E',
+  //     template: '<div></div>',
+  //     scope: {
+  //         options: '='
+  //     },
+  //     link: function (scope, element) {
+  //       Highcharts.chart(element[0], scope.options);
+  //     }
+  //   };
+  // });
 
   app.factory('LoginService', function() {
     var admin = 'a';
