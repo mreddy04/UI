@@ -67,7 +67,8 @@
           text: 'Temperature data'
       },
       chart: {
-        type: 'column'
+        type: 'column',
+        width: angular.element('.columnHighChart').width()
       },
       xAxis: {
           categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -102,7 +103,8 @@
 
     $scope.donutChartOptions = {
       chart: {
-          type: 'pie'
+          type: 'pie',
+          width: angular.element('.donutHighChart').width()
       },
       title: {
           text: 'Browser Usage'
