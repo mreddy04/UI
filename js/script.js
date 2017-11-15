@@ -60,7 +60,7 @@
     
   });
   
-  app.controller('HomeController', function($scope, $stateParams, $state) {
+  app.controller('HomeController', function($scope, $stateParams, $state, $timeout) {
 
     $scope.videosArr = ['https://www.youtube.com/embed/1-UdWS4RAA4', 
                         'https://www.youtube.com/embed/YVgc2PQd_bo',  
