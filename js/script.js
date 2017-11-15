@@ -108,7 +108,17 @@
       xAxis: {
           categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
       },
+      plotOptions: {
+        series: {
+          borderWidth: 0,
+          dataLabels: {
+              enabled: true,
+              format: '{point.y}'
+          }
+        }
+      },
       series: [{
+          colorByPoint: true,
           data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
       }]
     };
@@ -119,8 +129,6 @@
         }, {
             name: "Chrome",
             y: 24.03,
-            sliced: true,
-            selected: true
         }, {
             name: "Firefox",
             y: 10.38
@@ -150,8 +158,9 @@
           innerSize: '60%',
           cursor: 'pointer',
           dataLabels: {
-            enabled: true,
-            format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            enabled: false,
+            distance: -50,
+            format: '{point.name}'
           }
         }
       },
