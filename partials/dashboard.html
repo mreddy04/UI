@@ -29,12 +29,18 @@
 <div class="col-md-12" style="margin-top: 60px;">
     <div class="row">
         <div class="col-md-9">
-            <div>
-                <div class="col-md-6 columnHighChart" >
-                	<hc-chart options="chartOptions">Placeholder for generic chart</hc-chart>
+            <div id="ChartsArea">
+                <div class="col-md-6">
+                    <h6>Bar Chart</h6>
+                    <div id="columnHighChart">
+                    	<hc-chart options="chartOptions">Placeholder for generic chart</hc-chart>
+                    </div>
                 </div>
-                <div class="col-md-6 donutHighChart">
-                	<hc-chart title="Browser usage" options="donutChartOptions">Placeholder for pie chart</hc-chart>
+                <div class="col-md-6">
+                    <h6> Donut Chart</h6>
+                    <div id="donutHighChart">
+                    	<hc-chart title="Browser usage" options="donutChartOptions">Placeholder for pie chart</hc-chart>
+                    </div>
                 </div>
             </div>
             <div >

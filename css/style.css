@@ -140,3 +140,12 @@ body {
   color: dodgerblue;
   cursor: pointer;
 }
+
+.ChartsArea .col-md-6 {
+  background-color: #fff;
+}
+.ChartsArea .col-md-6 h6 {
+  border-bottom: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
